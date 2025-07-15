@@ -25,7 +25,7 @@ def render_page(title, content_html):
             body {{
                 margin: 0;
                 font-family: Arial, sans-serif;
-                background-image: url('https://raw.githubusercontent.com/kullaniciAdi/repoAdi/main/background.jpg');
+                background-image: url('https://raw.githubusercontent.com/kbgyazilim46/deneme-yakuzaya-sittir/main/background.jpg');
                 background-size: cover;
                 background-position: center;
                 color: white;
@@ -68,7 +68,6 @@ def render_page(title, content_html):
     <body>
         <nav>
             <a href="/">Ana Sayfa</a>
-            <a href="/hakkinda">Hakkında</a>
         </nav>
         <div class="content">
             {content_html}
@@ -82,17 +81,15 @@ def render_page(title, content_html):
 
 @app.route('/')
 def index():
-    content = "<h1>Yakuza'ya Hoşgeldiniz</h1><p>Bu, Yakuza'nın kişisel sitesidir.</p>"
-    return render_page("Ana Sayfa", content)
-
-@app.route('/hakkinda')
-def hakkinda():
     content = (
+        "<h1>Yakuza'ya Hoşgeldiniz</h1>"
+        "<p>Bu, Yakuza'nın kişisel sitesidir.</p>"
+        "<hr>"
         "<h1>Hakkında</h1>"
         "<p>İletişim için aşağıdaki adreslerden ulaşabilirsiniz.</p>"
         f"{contact_info}"
     )
-    return render_page("Hakkında", content)
+    return render_page("Ana Sayfa", content)
 
 if __name__ == '__main__':
     app.run(debug=True)
