@@ -85,8 +85,6 @@ def index():
         "<h1>Yakuza'ya Hoşgeldiniz</h1>"
         "<p>Bu, Yakuza'nın kişisel sitesidir.</p>"
         "<hr>"
-        "<h1>Hakkında</h1>"
-        "<p>İletişim için aşağıdaki adreslerden ulaşabilirsiniz.</p>"
         f"{contact_info}"
     )
     return render_page("Ana Sayfa", content)
